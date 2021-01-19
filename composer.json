@@ -1,0 +1,11 @@
+{
+    "name": "arbuz/testcms",
+    "require": {},
+    "autoload": {
+    "psr-4": {
+        "Engine\\": "engine",
+        "CMS\\": "CMS",
+        "Engine\\DI\\": "engine/DI",
+        "Admin\\": "admin"
+    }}
+}
