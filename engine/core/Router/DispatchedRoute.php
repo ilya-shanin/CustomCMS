@@ -8,7 +8,9 @@ class DispatchedRoute
     private $parameters;
 
     /**
-     * constructor
+     * DispatchedRoute constructor.
+     * @param $controller
+     * @param array $parameters
      */
     public function __construct($controller, $parameters = [])
     {
@@ -26,7 +28,7 @@ class DispatchedRoute
 
     /**
      * @return array
-     **/
+     */
     public function getParameters()
     {
         return $this->parameters;

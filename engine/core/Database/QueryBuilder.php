@@ -133,7 +133,7 @@ class QueryBuilder
     {
         $sql = '';
 
-        if(!empty($this->sql)) {
+        if (!empty($this->sql)) {
             foreach ($this->sql as $key => $value) {
                 if ($key == 'where') {
                     $sql .= ' WHERE ';

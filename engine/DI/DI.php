@@ -1,11 +1,11 @@
 <?php
+
 namespace Engine\DI;
 
-/*DI container*/
 class DI
 {
     /**
-     * @var array;
+     * @var array
      */
     private $container = [];
 
@@ -14,9 +14,11 @@ class DI
      * @param $value
      * @return $this
      */
-    public function set($key,$value)
+    public function set($key, $value)
     {
         $this->container[$key] = $value;
+
+        return $this;
     }
 
     /**
@@ -25,12 +27,15 @@ class DI
      */
     public function get($key)
     {
-        return $this->container[$key];
+        return $this->has($key);
     }
 
+    /**
+     * @param $key
+     * @return bool
+     */
     public function has($key)
     {
         return isset($this->container[$key]) ? $this->container[$key] : null;
     }
 }
-?>

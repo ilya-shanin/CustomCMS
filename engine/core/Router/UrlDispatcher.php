@@ -63,8 +63,7 @@ class UrlDispatcher
     {
         foreach($parameters as $key => $value)
         {
-            if(is_int($key))
-            {
+            if(is_int($key)) {
                 unset($parameters[$key]);
             }
         }
@@ -81,8 +80,7 @@ class UrlDispatcher
     {
         $routes = $this->routes(strtoupper($method));
 
-        if(array_key_exists($uri,$routes))
-        {
+        if(array_key_exists($uri,$routes)) {
             return new DispatchedRoute($routes[$uri]);
         }
 
@@ -95,8 +93,7 @@ class UrlDispatcher
         {
             $pattern = '#^' . $route . '$#s';
 
-            if(preg_match($pattern,$uri,$parameters))
-            {
+            if(preg_match($pattern,$uri,$parameters)) {
                 return new DispatchedRoute($controller, $this->processParam($parameters));
             }
         }
