@@ -8,7 +8,7 @@ class_alias('Engine\\Core\\Template\\Theme', 'Theme');
 class_alias('Engine\\Core\\Template\\Setting', 'Setting');
 class_alias('Engine\\Core\\Template\\Menu', 'Menu');
 
-use Engine\Cms;
+use Engine\CMS;
 use Engine\DI\DI;
 
 try{
@@ -25,7 +25,7 @@ try{
     // Init models
     $di->set('model', []);
 
-    $cms = new Cms($di);
+    $cms = new CMS($di);
     $cms->run();
 
 }catch (\ErrorException $e) {
